@@ -11,6 +11,13 @@
 		52DB1EEC273BEBE60004D27E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1EEB273BEBE60004D27E /* AppDelegate.swift */; };
 		52DB1EF5273BEBEB0004D27E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DB1EF4273BEBEB0004D27E /* Assets.xcassets */; };
 		52DB1EF8273BEBEB0004D27E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DB1EF6273BEBEB0004D27E /* LaunchScreen.storyboard */; };
+		52DB1F03273BFD270004D27E /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F02273BFD270004D27E /* BaseAPI.swift */; };
+		52DB1F05273BFE1B0004D27E /* ViaplayAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F04273BFE1B0004D27E /* ViaplayAPI.swift */; };
+		52DB1F0A273BFEA00004D27E /* ViaplayTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F09273BFEA00004D27E /* ViaplayTarget.swift */; };
+		52DB1F0C273C012C0004D27E /* SectionsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F0B273C012C0004D27E /* SectionsDTO.swift */; };
+		52DB1F0F273C01520004D27E /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F0E273C01520004D27E /* DTO.swift */; };
+		52DB1F11273C02CD0004D27E /* SectionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F10273C02CD0004D27E /* SectionDTO.swift */; };
+		52DB1F13273C03630004D27E /* ViaplayAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F12273C03630004D27E /* ViaplayAPIProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +28,13 @@
 		52DB1EF4273BEBEB0004D27E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52DB1EF7273BEBEB0004D27E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52DB1EF9273BEBEB0004D27E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52DB1F02273BFD270004D27E /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		52DB1F04273BFE1B0004D27E /* ViaplayAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaplayAPI.swift; sourceTree = "<group>"; };
+		52DB1F09273BFEA00004D27E /* ViaplayTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaplayTarget.swift; sourceTree = "<group>"; };
+		52DB1F0B273C012C0004D27E /* SectionsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsDTO.swift; sourceTree = "<group>"; };
+		52DB1F0E273C01520004D27E /* DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
+		52DB1F10273C02CD0004D27E /* SectionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDTO.swift; sourceTree = "<group>"; };
+		52DB1F12273C03630004D27E /* ViaplayAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaplayAPIProtocol.swift; sourceTree = "<group>"; };
 		DE365747C8AEBB1635AD9823 /* Pods-viaplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viaplay.release.xcconfig"; path = "Target Support Files/Pods-viaplay/Pods-viaplay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,8 +99,55 @@
 		52DB1F00273BEFF40004D27E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				52DB1F01273BFCCE0004D27E /* Service */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		52DB1F01273BFCCE0004D27E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				52DB1F14273C036B0004D27E /* Protocols */,
+				52DB1F06273BFE6D0004D27E /* API */,
+				52DB1F07273BFE740004D27E /* Target */,
+				52DB1F08273BFE7E0004D27E /* DTO */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		52DB1F06273BFE6D0004D27E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				52DB1F02273BFD270004D27E /* BaseAPI.swift */,
+				52DB1F04273BFE1B0004D27E /* ViaplayAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		52DB1F07273BFE740004D27E /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				52DB1F09273BFEA00004D27E /* ViaplayTarget.swift */,
+			);
+			path = Target;
+			sourceTree = "<group>";
+		};
+		52DB1F08273BFE7E0004D27E /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				52DB1F0E273C01520004D27E /* DTO.swift */,
+				52DB1F0B273C012C0004D27E /* SectionsDTO.swift */,
+				52DB1F10273C02CD0004D27E /* SectionDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		52DB1F14273C036B0004D27E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				52DB1F12273C03630004D27E /* ViaplayAPIProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		8A1173F90C67663E0A470CE1 /* Pods */ = {
@@ -95,7 +156,6 @@
 				45339406351165796D500D2E /* Pods-viaplay.debug.xcconfig */,
 				DE365747C8AEBB1635AD9823 /* Pods-viaplay.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -110,6 +170,7 @@
 				52DB1EE4273BEBE60004D27E /* Sources */,
 				52DB1EE5273BEBE60004D27E /* Frameworks */,
 				52DB1EE6273BEBE60004D27E /* Resources */,
+				59CAF4CE76BA02D3833CDC4E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,6 +249,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		59CAF4CE76BA02D3833CDC4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-viaplay/Pods-viaplay-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-viaplay/Pods-viaplay-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-viaplay/Pods-viaplay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -195,7 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52DB1F05273BFE1B0004D27E /* ViaplayAPI.swift in Sources */,
+				52DB1F03273BFD270004D27E /* BaseAPI.swift in Sources */,
 				52DB1EEC273BEBE60004D27E /* AppDelegate.swift in Sources */,
+				52DB1F0F273C01520004D27E /* DTO.swift in Sources */,
+				52DB1F0C273C012C0004D27E /* SectionsDTO.swift in Sources */,
+				52DB1F13273C03630004D27E /* ViaplayAPIProtocol.swift in Sources */,
+				52DB1F11273C02CD0004D27E /* SectionDTO.swift in Sources */,
+				52DB1F0A273BFEA00004D27E /* ViaplayTarget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
