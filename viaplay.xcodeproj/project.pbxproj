@@ -24,6 +24,16 @@
 		52DB1F1E273C1C300004D27E /* ViaplayDataBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F1D273C1C300004D27E /* ViaplayDataBaseProtocol.swift */; };
 		52DB1F21273C1D8F0004D27E /* ViaplayData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F1F273C1D8E0004D27E /* ViaplayData.xcdatamodeld */; };
 		52DB1F28273C1F800004D27E /* ViaplaySection+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F26273C1F800004D27E /* ViaplaySection+CoreDataClass.swift */; };
+		52DB1F2B273C34280004D27E /* SectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F2A273C34280004D27E /* SectionsViewController.swift */; };
+		52DB1F2D273C34360004D27E /* SectionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F2C273C34360004D27E /* SectionsViewModel.swift */; };
+		52DB1F33273C3A620004D27E /* SectionsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F32273C3A620004D27E /* SectionsTableCell.swift */; };
+		52DB1F36273C59270004D27E /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F35273C59270004D27E /* Factory.swift */; };
+		52DB1F39273C5D500004D27E /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F38273C5D500004D27E /* ViewCode.swift */; };
+		52DB1F3C273C5EC50004D27E /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F3B273C5EC50004D27E /* ShadowView.swift */; };
+		52DB1F40273C68A10004D27E /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F3F273C68A10004D27E /* Navigator.swift */; };
+		52DB1F42273C69450004D27E /* Mixin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F41273C69450004D27E /* Mixin.swift */; };
+		52DB1F44273C697C0004D27E /* SectionsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F43273C697C0004D27E /* SectionsNavigator.swift */; };
+		52DB1F49273C6CDE0004D27E /* Weakify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F48273C6CDE0004D27E /* Weakify.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +57,16 @@
 		52DB1F1D273C1C300004D27E /* ViaplayDataBaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaplayDataBaseProtocol.swift; sourceTree = "<group>"; };
 		52DB1F20273C1D8F0004D27E /* ViaplayData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ViaplayData.xcdatamodel; sourceTree = "<group>"; };
 		52DB1F26273C1F800004D27E /* ViaplaySection+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViaplaySection+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		52DB1F2A273C34280004D27E /* SectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsViewController.swift; sourceTree = "<group>"; };
+		52DB1F2C273C34360004D27E /* SectionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsViewModel.swift; sourceTree = "<group>"; };
+		52DB1F32273C3A620004D27E /* SectionsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsTableCell.swift; sourceTree = "<group>"; };
+		52DB1F35273C59270004D27E /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		52DB1F38273C5D500004D27E /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
+		52DB1F3B273C5EC50004D27E /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		52DB1F3F273C68A10004D27E /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		52DB1F41273C69450004D27E /* Mixin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mixin.swift; sourceTree = "<group>"; };
+		52DB1F43273C697C0004D27E /* SectionsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsNavigator.swift; sourceTree = "<group>"; };
+		52DB1F48273C6CDE0004D27E /* Weakify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weakify.swift; sourceTree = "<group>"; };
 		DE365747C8AEBB1635AD9823 /* Pods-viaplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viaplay.release.xcconfig"; path = "Target Support Files/Pods-viaplay/Pods-viaplay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +131,9 @@
 		52DB1F00273BEFF40004D27E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				52DB1F37273C5D440004D27E /* Misc */,
+				52DB1F34273C591C0004D27E /* Factory */,
+				52DB1F30273C38AD0004D27E /* Modules */,
 				52DB1F15273C1AE20004D27E /* DB */,
 				52DB1F01273BFCCE0004D27E /* Service */,
 			);
@@ -182,6 +205,77 @@
 				52DB1F1A273C1BFD0004D27E /* ViaplayDataBase.swift */,
 			);
 			path = ViaplayDB;
+			sourceTree = "<group>";
+		};
+		52DB1F30273C38AD0004D27E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				52DB1F31273C38DF0004D27E /* Sections */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		52DB1F31273C38DF0004D27E /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				52DB1F3D273C687E0004D27E /* ViewModel */,
+				52DB1F3E273C68870004D27E /* View */,
+				52DB1F45273C6A540004D27E /* Navigator */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		52DB1F34273C591C0004D27E /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				52DB1F35273C59270004D27E /* Factory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		52DB1F37273C5D440004D27E /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				52DB1F48273C6CDE0004D27E /* Weakify.swift */,
+				52DB1F41273C69450004D27E /* Mixin.swift */,
+				52DB1F3A273C5EBB0004D27E /* UIKit */,
+				52DB1F38273C5D500004D27E /* ViewCode.swift */,
+				52DB1F3F273C68A10004D27E /* Navigator.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		52DB1F3A273C5EBB0004D27E /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				52DB1F3B273C5EC50004D27E /* ShadowView.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		52DB1F3D273C687E0004D27E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52DB1F2C273C34360004D27E /* SectionsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		52DB1F3E273C68870004D27E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52DB1F2A273C34280004D27E /* SectionsViewController.swift */,
+				52DB1F32273C3A620004D27E /* SectionsTableCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52DB1F45273C6A540004D27E /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				52DB1F43273C697C0004D27E /* SectionsNavigator.swift */,
+			);
+			path = Navigator;
 			sourceTree = "<group>";
 		};
 		8A1173F90C67663E0A470CE1 /* Pods */ = {
@@ -307,17 +401,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52DB1F49273C6CDE0004D27E /* Weakify.swift in Sources */,
 				52DB1F21273C1D8F0004D27E /* ViaplayData.xcdatamodeld in Sources */,
 				52DB1F1B273C1BFD0004D27E /* ViaplayDataBase.swift in Sources */,
+				52DB1F2B273C34280004D27E /* SectionsViewController.swift in Sources */,
+				52DB1F33273C3A620004D27E /* SectionsTableCell.swift in Sources */,
+				52DB1F3C273C5EC50004D27E /* ShadowView.swift in Sources */,
+				52DB1F42273C69450004D27E /* Mixin.swift in Sources */,
 				52DB1F28273C1F800004D27E /* ViaplaySection+CoreDataClass.swift in Sources */,
 				52DB1F1E273C1C300004D27E /* ViaplayDataBaseProtocol.swift in Sources */,
 				52DB1F19273C1B6E0004D27E /* DataBase.swift in Sources */,
+				52DB1F2D273C34360004D27E /* SectionsViewModel.swift in Sources */,
 				52DB1F05273BFE1B0004D27E /* ViaplayAPI.swift in Sources */,
 				52DB1F03273BFD270004D27E /* BaseAPI.swift in Sources */,
 				52DB1EEC273BEBE60004D27E /* AppDelegate.swift in Sources */,
 				52DB1F0F273C01520004D27E /* DTO.swift in Sources */,
+				52DB1F44273C697C0004D27E /* SectionsNavigator.swift in Sources */,
 				52DB1F0C273C012C0004D27E /* SectionsDTO.swift in Sources */,
+				52DB1F40273C68A10004D27E /* Navigator.swift in Sources */,
+				52DB1F39273C5D500004D27E /* ViewCode.swift in Sources */,
 				52DB1F13273C03630004D27E /* ViaplayAPIProtocol.swift in Sources */,
+				52DB1F36273C59270004D27E /* Factory.swift in Sources */,
 				52DB1F17273C1B060004D27E /* CoreDataManager.swift in Sources */,
 				52DB1F11273C02CD0004D27E /* SectionDTO.swift in Sources */,
 				52DB1F0A273BFEA00004D27E /* ViaplayTarget.swift in Sources */,
