@@ -1,5 +1,6 @@
 import UIKit
 import Combine
+import Toaster
 
 enum Sections { }
 
@@ -8,6 +9,7 @@ extension Sections {
   final class ViewController: UITableViewController {
     private let viewModel: Sections.ViewModel
     private var cancellables: Set<AnyCancellable> = []
+    private var propsCancellables: Set<AnyCancellable> = []
     
     private var props: Sections.Props = .defaultValue {
       didSet { tableView.reloadData() }
@@ -47,8 +49,21 @@ extension Sections.ViewController: ViewCode {
     
     viewModel
       .props
-      .sink(receiveValue: { [weak self] props in self?.props = props })
+      .sink(receiveValue: weakify(Sections.ViewController.render, object: self))
       .store(in: &cancellables)
+    
+    ToastView.appearance().font = UIFont.systemFont(ofSize: 16)
+  }
+  
+  private func render(props: Sections.Props) {
+    self.props = props
+    
+    propsCancellables
+      .removeAll()
+    props
+      .onError
+      .sink(receiveValue: { Toast(text: $0, duration: Delay.long).show() })
+      .store(in: &propsCancellables)
   }
 }
 

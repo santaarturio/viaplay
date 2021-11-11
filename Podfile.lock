@@ -5,22 +5,26 @@ PODS:
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
   - Result (5.0.0)
+  - Toaster (2.3.0)
 
 DEPENDENCIES:
   - Moya/Combine (~> 15.0)
   - Result (~> 5.0)
+  - Toaster (~> 2.3)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Moya
     - Result
+    - Toaster
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   Result: ed341d2f236af425b803e690e9bd8fd0a0cb7c5a
+  Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
 
-PODFILE CHECKSUM: a1eff7b1f25605e5b679ba05f45b68014a33a439
+PODFILE CHECKSUM: 100cea7ba7f62f9ab8554ecf1daf890c3b3aa574
 
 COCOAPODS: 1.11.2

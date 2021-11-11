@@ -94,6 +94,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5243EC4F273D4CEE0051F0EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52DB1F4D273C76430004D27E /* DetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5243EC50273D4CF70051F0EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52DB1F4B273C76330004D27E /* DetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		52DB1EDF273BEBE60004D27E = {
 			isa = PBXGroup;
 			children = (
@@ -286,8 +302,8 @@
 		52DB1F4A273C76180004D27E /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				52DB1F4D273C76430004D27E /* DetailsViewModel.swift */,
-				52DB1F4B273C76330004D27E /* DetailsViewController.swift */,
+				5243EC4F273D4CEE0051F0EB /* ViewModel */,
+				5243EC50273D4CF70051F0EB /* View */,
 			);
 			path = Details;
 			sourceTree = "<group>";

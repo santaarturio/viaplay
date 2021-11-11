@@ -1,12 +1,14 @@
 import Combine
+import struct Result.AnyError
 
 extension Sections {
   
   struct Props {
     let sections: [ViaplaySection]
     let details: PassthroughSubject<Int, Never>
+    let onError: PassthroughSubject<String?, Never>
     
-    static let defaultValue: Self = .init(sections: [], details: .init())
+    static let defaultValue: Self = .init(sections: [], details: .init(), onError: .init())
   }
 }
 
@@ -44,7 +46,15 @@ private extension Sections.ViewModel {
       .sink(receiveValue: weakify(SectionsNavigator.navigate, object: navigator))
       .store(in: &cancellables)
     
-    props.send(Sections.Props(sections: sections, details: details))
+    let onError = PassthroughSubject<String?, Never>()
+    
+    props.send(Sections.Props(sections: sections, details: details, onError: onError))
+  }
+  
+  func handleCompletion(_ completion: Subscribers.Completion<AnyError>) {
+    guard
+      case let .failure(error) = completion else { return }
+    props.value.onError.send(error.localizedDescription)
   }
   
   func setup() {
@@ -56,7 +66,7 @@ private extension Sections.ViewModel {
     api
       .sections()
       .sink(
-        receiveCompletion: { _ in },
+        receiveCompletion: weakify(Sections.ViewModel.handleCompletion, object: self),
         receiveValue: { [weak self] sections in
           sections
             .links
