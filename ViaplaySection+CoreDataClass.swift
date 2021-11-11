@@ -15,11 +15,14 @@ public class ViaplaySection: NSManagedObject {
   func configure(preview: DTO.Sections.Links.Section) {
     self.id = preview.id
     self.title = preview.title
-    self.path = String(preview.href.split(separator: "/").last ?? "")
+    
+    let _path = String(preview.href.split(separator: "/").last ?? "")
+    self.path = _path
+      .range(of: "{?dtg}")
+      .map { range in _path.replacingCharacters(in: range, with: "") } ?? ""
   }
   
   func configure(section: DTO.Section) {
-    self.title = section.title
     self.text = section.description
   }
 }

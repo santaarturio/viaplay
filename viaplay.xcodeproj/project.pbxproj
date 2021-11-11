@@ -34,6 +34,8 @@
 		52DB1F42273C69450004D27E /* Mixin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F41273C69450004D27E /* Mixin.swift */; };
 		52DB1F44273C697C0004D27E /* SectionsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F43273C697C0004D27E /* SectionsNavigator.swift */; };
 		52DB1F49273C6CDE0004D27E /* Weakify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F48273C6CDE0004D27E /* Weakify.swift */; };
+		52DB1F4C273C76330004D27E /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F4B273C76330004D27E /* DetailsViewController.swift */; };
+		52DB1F4E273C76430004D27E /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB1F4D273C76430004D27E /* DetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		52DB1F41273C69450004D27E /* Mixin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mixin.swift; sourceTree = "<group>"; };
 		52DB1F43273C697C0004D27E /* SectionsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsNavigator.swift; sourceTree = "<group>"; };
 		52DB1F48273C6CDE0004D27E /* Weakify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weakify.swift; sourceTree = "<group>"; };
+		52DB1F4B273C76330004D27E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		52DB1F4D273C76430004D27E /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		DE365747C8AEBB1635AD9823 /* Pods-viaplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viaplay.release.xcconfig"; path = "Target Support Files/Pods-viaplay/Pods-viaplay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				52DB1F31273C38DF0004D27E /* Sections */,
+				52DB1F4A273C76180004D27E /* Details */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -276,6 +281,15 @@
 				52DB1F43273C697C0004D27E /* SectionsNavigator.swift */,
 			);
 			path = Navigator;
+			sourceTree = "<group>";
+		};
+		52DB1F4A273C76180004D27E /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				52DB1F4D273C76430004D27E /* DetailsViewModel.swift */,
+				52DB1F4B273C76330004D27E /* DetailsViewController.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		8A1173F90C67663E0A470CE1 /* Pods */ = {
@@ -418,8 +432,10 @@
 				52DB1F0F273C01520004D27E /* DTO.swift in Sources */,
 				52DB1F44273C697C0004D27E /* SectionsNavigator.swift in Sources */,
 				52DB1F0C273C012C0004D27E /* SectionsDTO.swift in Sources */,
+				52DB1F4E273C76430004D27E /* DetailsViewModel.swift in Sources */,
 				52DB1F40273C68A10004D27E /* Navigator.swift in Sources */,
 				52DB1F39273C5D500004D27E /* ViewCode.swift in Sources */,
+				52DB1F4C273C76330004D27E /* DetailsViewController.swift in Sources */,
 				52DB1F13273C03630004D27E /* ViaplayAPIProtocol.swift in Sources */,
 				52DB1F36273C59270004D27E /* Factory.swift in Sources */,
 				52DB1F17273C1B060004D27E /* CoreDataManager.swift in Sources */,
