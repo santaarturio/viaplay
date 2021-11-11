@@ -6,5 +6,6 @@ target 'viaplay' do
   
   pod 'Moya/Combine', '~> 15.0'
   pod 'Result', '~> 5.0'
+  pod 'Toaster', '~> 2.3'
   
 end
