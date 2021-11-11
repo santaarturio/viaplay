@@ -8,7 +8,7 @@ extension Sections {
     let details: PassthroughSubject<Int, Never>
     let onError: PassthroughSubject<String?, Never>
     
-    static let defaultValue: Self = .init(sections: [], details: .init(), onError: .init())
+    static let defaultValue = Props(sections: [], details: .init(), onError: .init())
   }
 }
 
@@ -73,8 +73,7 @@ private extension Sections.ViewModel {
             .sections
             .forEach { section in
               self?.dataBase
-              .updateSection(id: section.id) { $0.configure(preview: section)} }
-        })
+              .updateSection(id: section.id) { $0.configure(preview: section) } }})
       .store(in: &cancellables)
   }
 }

@@ -3,22 +3,20 @@ import UIKit
 final class Factory {
   static let shared = Factory()
   
-  private var navigationController = UINavigationController()
+  private let navigationController = UINavigationController()
   
   func createRootViewController() -> UIViewController {
-    navigationController = UINavigationController()
-    
-    let viewController = Sections
-      .ViewController(
-        viewModel: Sections
-          .ViewModel(
-            dataBase: DataBase.viaplay,
-            api: ViaplayAPI(),
-            navigator: SectionsNavigator { [weak self] in self?.navigationController }
-          )
-      )
-    
-    navigationController.viewControllers = [viewController]
+    navigationController.viewControllers = [
+      Sections
+        .ViewController(
+          viewModel: Sections
+            .ViewModel(
+              dataBase: DataBase.viaplay,
+              api: ViaplayAPI(),
+              navigator: SectionsNavigator { [weak self] in self?.navigationController }
+            )
+        )
+    ]
     return navigationController
   }
   

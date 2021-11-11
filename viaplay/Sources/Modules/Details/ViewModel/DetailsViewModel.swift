@@ -6,7 +6,7 @@ extension Details {
     let title: String?
     let text: String?
     
-    static let defaultValue: Self = .init(title: nil, text: nil)
+    static let defaultValue = Props(title: nil, text: nil)
   }
 }
 
@@ -64,8 +64,7 @@ private extension Details.ViewModel {
               
               self?
                 .props
-                .send(Details.Props(title: section.title, text: section.text))
-            }})
+                .send(Details.Props(title: section.title, text: section.text)) }})
       .store(in: &cancellables)
   }
 }
