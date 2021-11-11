@@ -9,6 +9,10 @@ extension Sections {
     private let viewModel: Sections.ViewModel
     private var cancellables: Set<AnyCancellable> = []
     
+    private var props: Sections.Props = .defaultValue {
+      didSet { tableView.reloadData() }
+    }
+    
     init(viewModel: Sections.ViewModel) {
       self.viewModel = viewModel
       super.init(nibName: nil, bundle: nil)
@@ -42,9 +46,8 @@ extension Sections.ViewController: ViewCode {
         forCellReuseIdentifier: String(describing: Sections.TableCell.self))
     
     viewModel
-      .reload
-      .dropFirst()
-      .sink { [weak self] in self?.tableView.reloadData() }
+      .props
+      .sink(receiveValue: { [weak self] props in self?.props = props })
       .store(in: &cancellables)
   }
 }
@@ -55,7 +58,7 @@ extension Sections.ViewController {
   override func tableView(
     _ tableView: UITableView,
     numberOfRowsInSection section: Int
-  ) -> Int { viewModel.sections.count }
+  ) -> Int { props.sections.count }
   
   override func tableView(
     _ tableView: UITableView,
@@ -66,12 +69,12 @@ extension Sections.ViewController {
         .dequeueReusableCell(
           withIdentifier: String(describing: Sections.TableCell.self)
         ) as? Sections.TableCell else { return .init() }
-    cell.configure(section: viewModel.sections[indexPath.row])
+    cell.configure(section: props.sections[indexPath.row])
     return cell
   }
   
   override func tableView(
     _ tableView: UITableView,
     didSelectRowAt indexPath: IndexPath
-  ) { viewModel.details.send(indexPath.row) }
+  ) { props.details.send(indexPath.row) }
 }

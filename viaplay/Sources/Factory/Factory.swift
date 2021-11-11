@@ -8,17 +8,29 @@ final class Factory {
   func createRootViewController() -> UIViewController {
     navigationController = UINavigationController()
     
-    let viewModel = Sections
-      .ViewModel(
-        dataBase: DataBase.viaplay,
-        api: ViaplayAPI(),
-        navigator: SectionsNavigator { [weak self] in self?.navigationController })
     let viewController = Sections
-      .ViewController(viewModel: viewModel)
+      .ViewController(
+        viewModel: Sections
+          .ViewModel(
+            dataBase: DataBase.viaplay,
+            api: ViaplayAPI(),
+            navigator: SectionsNavigator { [weak self] in self?.navigationController }
+          )
+      )
     
     navigationController.viewControllers = [viewController]
     return navigationController
   }
   
-  func createDetailsViewController(path: String) -> UIViewController { .init() }
+  func createDetailsViewController(sectionId: String) -> UIViewController {
+    Details
+      .ViewController(
+        viewModel: Details
+          .ViewModel(
+            sectionId: sectionId,
+            dataBase: DataBase.viaplay,
+            api: ViaplayAPI()
+          )
+      )
+  }
 }
