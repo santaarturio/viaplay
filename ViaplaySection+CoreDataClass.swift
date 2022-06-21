@@ -18,7 +18,7 @@ public class ViaplaySection: NSManagedObject {
     
     let _path = String(preview.href.split(separator: "/").last ?? "")
     self.path = _path
-      .range(of: "{?dtg}")
+      .range(of: "{?dtg,productsPerPage}")
       .map { range in _path.replacingCharacters(in: range, with: "") } ?? ""
   }
   
