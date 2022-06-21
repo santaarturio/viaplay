@@ -6,16 +6,15 @@ class ShadowView: UIView {
   
   private func setupShadow() {
     if setupShadowDone { return }
-    layer.cornerRadius = 15
-    layer.shadowOffset = CGSize(width: 0, height: 5)
-    layer.shadowRadius = 4.5
+    layer.cornerRadius = 10
+    layer.shadowOffset = CGSize(width: 0, height: 4)
+    layer.shadowRadius = 3.0
     layer.shadowOpacity = 0.3
     layer.shadowColor = UIColor.black.cgColor
     layer.shadowPath = UIBezierPath(
       roundedRect: self.bounds,
       byRoundingCorners: .allCorners,
-      cornerRadii: CGSize(width: 8,
-                          height: 8)).cgPath
+      cornerRadii: CGSize(width: 10, height: 10)).cgPath
     layer.shouldRasterize = true
     layer.rasterizationScale = UIScreen.main.scale
     
