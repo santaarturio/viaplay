@@ -72,6 +72,7 @@
 		52DB1F4B273C76330004D27E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		52DB1F4D273C76430004D27E /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		DE365747C8AEBB1635AD9823 /* Pods-viaplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-viaplay.release.xcconfig"; path = "Target Support Files/Pods-viaplay/Pods-viaplay.release.xcconfig"; sourceTree = "<group>"; };
+		FEC742332864CD5300CA9B6D /* ViaplayData 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ViaplayData 2.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -679,9 +680,10 @@
 		52DB1F1F273C1D8E0004D27E /* ViaplayData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				FEC742332864CD5300CA9B6D /* ViaplayData 2.xcdatamodel */,
 				52DB1F20273C1D8F0004D27E /* ViaplayData.xcdatamodel */,
 			);
-			currentVersion = 52DB1F20273C1D8F0004D27E /* ViaplayData.xcdatamodel */;
+			currentVersion = FEC742332864CD5300CA9B6D /* ViaplayData 2.xcdatamodel */;
 			path = ViaplayData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

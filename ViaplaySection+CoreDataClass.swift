@@ -24,5 +24,6 @@ public class ViaplaySection: NSManagedObject {
   
   func configure(section: DTO.Section) {
     self.text = section.description
+    self.pageType = section.pageType
   }
 }
