@@ -5,8 +5,9 @@ extension Details {
   struct Props {
     let title: String?
     let text: String?
+    let pageType: String?
     
-    static let defaultValue = Props(title: nil, text: nil)
+    static let defaultValue = Props(title: nil, text: nil, pageType: nil)
   }
 }
 
@@ -43,7 +44,7 @@ private extension Details.ViewModel {
       .updateSection(id: sectionId) { [weak self] section in
         self?
           .props
-          .send(Details.Props(title: section.title, text: section.text))
+          .send(Details.Props(title: section.title, text: section.text, pageType: section.pageType))
         
         section.path.map { path in self?.path = path }
       }
@@ -64,7 +65,7 @@ private extension Details.ViewModel {
               
               self?
                 .props
-                .send(Details.Props(title: section.title, text: section.text)) }})
+                .send(Details.Props(title: section.title, text: section.text, pageType: section.pageType)) }})
       .store(in: &cancellables)
   }
 }

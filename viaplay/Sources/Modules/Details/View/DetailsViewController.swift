@@ -10,6 +10,7 @@ extension Details {
     private var cancellables: Set<AnyCancellable> = []
     
     private lazy var textLabel = UILabel()
+    private lazy var pageTypeLabel = UILabel()
     
     init(viewModel: Details.ViewModel) {
       self.viewModel = viewModel
@@ -31,7 +32,8 @@ extension Details {
 extension Details.ViewController: ViewCode {
   
   func setupViewHierarhcy() {
-    view.addSubview(textLabel)
+    [textLabel, pageTypeLabel]
+      .forEach(view.addSubview)
   }
   
   func setupConstraints() {
@@ -40,6 +42,13 @@ extension Details.ViewController: ViewCode {
       textLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24),
       textLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16),
       textLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16)
+    ])
+    
+    pageTypeLabel.translatesAutoresizingMaskIntoConstraints = false
+    NSLayoutConstraint.activate([
+      pageTypeLabel.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 16),
+      pageTypeLabel.leftAnchor.constraint(equalTo: textLabel.leftAnchor),
+      pageTypeLabel.rightAnchor.constraint(equalTo: textLabel.rightAnchor)
     ])
   }
   
@@ -58,5 +67,6 @@ extension Details.ViewController: ViewCode {
   private func render(props: Details.Props) {
     title = props.title
     textLabel.text = props.text
+    pageTypeLabel.text = "Page Type: \(props.pageType ?? "unknown")"
   }
 }
