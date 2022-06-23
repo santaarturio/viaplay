@@ -44,7 +44,7 @@ private extension Details.ViewModel {
       .updateSection(id: sectionId) { [weak self] section in
         self?
           .props
-          .send(Details.Props(title: section.title, text: section.text, pageType: section.pageType))
+          .send(Details.Props(title: section.title, text: section.text, pageType: section.sectionType))
         
         section.path.map { path in self?.path = path }
       }
@@ -65,7 +65,7 @@ private extension Details.ViewModel {
               
               self?
                 .props
-                .send(Details.Props(title: section.title, text: section.text, pageType: section.pageType)) }})
+                .send(Details.Props(title: section.title, text: section.text, pageType: section.sectionType)) }})
       .store(in: &cancellables)
   }
 }
